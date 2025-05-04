@@ -8,7 +8,7 @@ const projects = [
       "E-commerce de produtos digitais desenvolvido com React e TailwindCSS.",
     image: "/Etrix.png",
     tags: ["Angular", "TailwindCSS"],
-    demoUrl: "#",
+    demoUrl: "https://italomangueira-etrix.vercel.app/",
     githubUrl: "https://github.com/italomangueira/Etrix",
   },
   {

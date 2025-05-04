@@ -23,12 +23,6 @@ export const ContactSection = () => {
 
   function sendEmail(e) {
     e.preventDefault();
-
-    const templateParams = {
-      name: name,
-      email: email,
-      message: message,
-    };
     emailjs
       .send(
         import.meta.env.VITE_SERVICE_ID, // Service ID
@@ -93,7 +87,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="italo.mangueira@hotmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     italo.mangueira@hotmail.com
