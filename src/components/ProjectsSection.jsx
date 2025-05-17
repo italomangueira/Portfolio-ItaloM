@@ -13,9 +13,17 @@ const projects = [
   },
   {
     id: 2,
+    title: "MediFLow",
+    description: "MediFlow é um Packge de comunicação baseado no Mediatr.",
+    image: "/logoNuget.png",
+    tags: ["C#", ".Net", "MediatR", "Packges"],
+    demoUrl: "https://www.nuget.org/packages/MediFlow/",
+    githubUrl: "https://github.com/italomangueira/MediFlow",
+  },
+  {
+    id: 3,
     title: "Microsoft Certified: Azure Data Fundamentals",
-    description:
-      "Conceitos básicos de dados e bancos de dados, dados relacionais e não relacionais no Azure, e introdução a cargas de trabalho de análise de dados no Azure.",
+    description: "",
     image: "/microsoft-certified-fundamentals-badge.svg",
     tags: [
       "Azure",
@@ -29,11 +37,10 @@ const projects = [
       "https://learn.microsoft.com/api/credentials/share/en-us/ITALOMANGUEIRA-3775/697F8DCDA4EF3FE9?sharingId=20CF814CF5009016",
   },
   {
-    id: 3,
+    id: 4,
     title:
       "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
-    description:
-      "Princípios de segurança, conformidade e identidade, gerenciamento de identidade e acesso, proteção contra ameaças e governança no Azure.",
+    description: "",
     image: "/microsoft-certified-fundamentals-badge.svg",
     tags: [
       "Azure",
@@ -47,10 +54,9 @@ const projects = [
       "https://learn.microsoft.com/api/credentials/share/en-us/ITALOMANGUEIRA-3775/697F8DCDA4EF3FE9?sharingId=20CF814CF5009016",
   },
   {
-    id: 4,
+    id: 5,
     title: "Microsoft Certified: Azure AI Fundamentals",
-    description:
-      "Fundamentos de inteligência artificial e aprendizado de máquina, serviços de IA no Azure, processamento de linguagem natural, visão computacional e ética em IA.",
+    description: "",
     image: "/microsoft-certified-fundamentals-badge.svg",
     tags: [
       "Azure",
@@ -85,7 +91,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover "
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover h-full"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -95,7 +101,7 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-4">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, key) => (
                     <span

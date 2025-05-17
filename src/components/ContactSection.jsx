@@ -128,15 +128,24 @@ export const ContactSection = () => {
               </h4>
               <div className="flex space-x-4 justify-center">
                 <a
+                  className=" hover:text-primary transition-colors"
                   href="www.linkedin.com/in/italo-mangueira-6a39b3211"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
-                <a href="https://www.instagram.com/it_tal0/" target="_blank">
+                <a
+                  className=" hover:text-primary transition-colors"
+                  href="https://www.instagram.com/it_tal0/"
+                  target="_blank"
+                >
                   <Instagram />
                 </a>
-                <a href="https://github.com/italomangueira" target="_blank">
+                <a
+                  className=" hover:text-primary transition-colors"
+                  href="https://github.com/italomangueira"
+                  target="_blank"
+                >
                   <Github />
                 </a>
               </div>
@@ -211,7 +220,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button cursor-pointer w-full flex items-center justify-center gap-2"
                 )}
               >
                 {isSubmitting ? "Enviando..." : "Enviar"}
