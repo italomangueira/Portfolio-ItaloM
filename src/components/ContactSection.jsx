@@ -23,24 +23,21 @@ export const ContactSection = () => {
 
   function sendEmail(e) {
     e.preventDefault();
+    setIsSubmitting(true); // Adicione isso para desabilitar o botão
+
     emailjs
       .send(
-        import.meta.env.VITE_SERVICE_ID, // Service ID
-        import.meta.env.VITE_TEMPLATE_ID, // Template ID
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         {
           name: name,
           email: email,
-          message: message, // Template parameters
+          message: message,
         },
-        import.meta.env.VITE_PUBLIC_KEY // Public Key
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         (response) => {
-          console.log(
-            "Email sent successfully!",
-            response.status,
-            response.text
-          );
           toast({
             title: "Message sent!",
             description:
@@ -49,13 +46,14 @@ export const ContactSection = () => {
           setName("");
           setEmail("");
           setMessage("");
+          setIsSubmitting(false); // Libera o botão após sucesso
         },
         (err) => {
-          console.log("Failed to send email. Error: ", err);
           toast({
             title: "Error",
             description: "Failed to send email. Please try again later.",
           });
+          setIsSubmitting(false); // Libera o botão após erro
         }
       );
   }
