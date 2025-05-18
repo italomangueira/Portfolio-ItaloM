@@ -85,7 +85,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="italo.mangueira@hotmail.com"
+                    href="mailto:'italo.mangueira@hotmail.com'"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     italo.mangueira@hotmail.com
@@ -127,7 +127,7 @@ export const ContactSection = () => {
               <div className="flex space-x-4 justify-center">
                 <a
                   className=" hover:text-primary transition-colors"
-                  href="www.linkedin.com/in/italo-mangueira-6a39b3211"
+                  href="https://www.linkedin.com/in/italo-mangueira-6a39b3211"
                   target="_blank"
                 >
                   <Linkedin />
